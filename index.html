@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重要度選択型ToDoリスト</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="header">
+  <h1 class="title">重要度選択型ToDoリスト(仮)</h1>
+  </header>
+  
+    <h3>タスク新規登録</h3>
+    <form method="post">
+    <input type="text" class="addTask" size="40" maxlength="30">
+    <input type="datetime-local" class="time">
+    <select class="importance">
+      <option value="0">絶対やれ</option>
+      <option value="1">できればやれ</option>
+      <option value="2">なるべくやりたい</option>
+      <option value="3">できたらいいな</option>
+      </select>
+    <input type="submit" class="entry" value="登録する">
+    <button type="reset">リセット</button>
+    </form>
+
+    <h3>タスク一覧</h3>
+    <p>
+      <form method="post">
+      <select class="importanceSort">
+      <option value="0">重要度順</option>
+      <option value="1">期限順</option>
+    </select>
+    <button type="button" class="sort">並び替え</button>
+    </form>
+    </p>
+    <ul class="task taskList"></ul>
+
+  <script src="./todo.js" type="module"></script>
+</body>
+
+</html>
